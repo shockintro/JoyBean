@@ -1,3 +1,5 @@
 /test/
 /hibernate.cfg.xml
 /njupt/
+/applicationContext.xml
+/struts.xml
