@@ -10,22 +10,16 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-public class hibernateTest {
-
+public class hibernateTest extends HibernateDaoSupport{
+	public void test(){
+		System.out.println(getHibernateTemplate().find("from T_User"));
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Configuration configuration =  new Configuration().configure();
-		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry(); 
-		String HQLString = "SELECT * FROM T_USER WHERE ID=1";
-		SessionFactory sessionFactory= configuration.buildSessionFactory(serviceRegistry);
-		Session session = sessionFactory.openSession();
-		Query query = session.createQuery(HQLString);
-		List list = query.list();
-		for(Object o : list){
-		   T_User u = (T_User)o;
-		   System.out.println(u.getId()+" "+u.getUser_account());
-		}
+		hibernateTest a=new hibernateTest();
+		a.test();
 	}
 
 }
