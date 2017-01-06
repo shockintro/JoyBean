@@ -7,42 +7,79 @@
 	
 	<package name="user" namespace="/user" extends="struts-default">
 	    <action name="login" class="njupt.action.UserAction" method="login">
-			<result name="success">/index.jsp</result>
+			<result name="success">/Management.jsp</result>
 			<result name="error">/login.jsp</result>
 		</action>
+		<action name="Beanlogin" class="njupt.action.UserAction" method="Beanlogin">
+			<result name="success">/index.jsp</result>
+			<result name="error">/Beanlogin.jsp</result>
+		</action>
 		<action name="register" class="njupt.action.UserAction" method="register">
-			<result name="success">/login.jsp</result>
+			<result name="success">/BeanLogin.jsp</result>
 			<result name="error">/Register.jsp</result>
 		</action>
-<!-- 		<action class="njupt.action.UserAction" method="PersonalCenter">
-			
-		</action> -->
+		<action name="test" class="njupt.action.UserAction" method="test">
+			<result name="success">/test/structReceive.jsp</result>
+			<result name="error">/Register.jsp</result>
+		</action>
+		<action name="beanFeeInfo" class="njupt.action.UserAction" method="beanFeeInfo">
+			<result name="success">/Management.jsp</result>
+			<result name="error">/Management.jsp</result>
+		</action>
+		<action name="gameType" class="njupt.action.UserAction" method="gameType">
+			<result name="success">/Management.jsp</result>
+			<result name="error">/Management.jsp</result>
+		</action>
+		<action name="game" class="njupt.action.UserAction" method="game">
+			<result name="success">/Management.jsp</result>
+			<result name="error">/Management.jsp</result>
+		</action>
+		<action name="allGame" class="njupt.action.UserAction" method="allGame">
+			<result name="success">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		<action name="addBeanFee" class="njupt.action.UserAction" method="addBeanFee">
+			<result name="success">/PersonalCenter.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
 	</package>
+	
 	<package name="ajax" extends="struts-default,json-default" namespace="/">  
 		<action name="pluginAjax" class="njupt.action.bookAction" method="pluginAjax">  
             <result type="json">  
                 <param name="root">Text</param>  
             </result>  
         </action > 
-        <action name="PersonalCenter" class="njupt.action.bookAction" method="PersonalCenter">
-			<result type="json">  
-                <param name="root">list</param>  
+        
+        <action name="statusAjax" class="njupt.action.bookAction" method="statusAjax">  
+            <result type="json">  
+                <param name="root">Text</param>  
             </result>  
-		</action>
-       <!--  <action name="reUse" class="njupt.action.bookAction" method="reUse">
-        	<result type="json">
-        		<param name="root"></param>
-        	</result>
-        </action>
-        <action name="forbidUse" class="njupt.action.bookAction" method="forbidUse">
-        	<result type="json">
-        		<param name="root"></param>
-        	</result>
-        </action> -->
-<!-- 		<action name="checkCode" class="njupt.action.checkCode" >
-			<result name="success">/login.jsp</result>
-		</action> -->
-		<!-- 验证码AJAX -->
-	
+        </action > 
+        <action name="addGameAjax" class="njupt.action.bookAction" method="addGameAjax">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
+        <action name="gameTypeChange" class="njupt.action.bookAction" method="gameTypeChange">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
+        <action name="addGame" class="njupt.action.bookAction" method="addGame">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
+        <action name="changeGame" class="njupt.action.bookAction" method="changeGame">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
+         <action name="addFeeAjax" class="njupt.action.bookAction" method="addFeeAjax">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
 	</package>
 </struts>    

@@ -22,11 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 	<style>
-		.checkCode{width:290px;height:30px;text-align:center;margin:0 auto; background:#ECF4FF; border:0;}
-		.center{text-align:center;}
-		.checkButton{width:85px;height:30px;display:block; background:#ECF4FF;}
-		
-		
 		.clear{ display:block; clear:both; content:"";}
 		.clear{ zoom:1;}
 		.login{ height:260px;width:300px; margin:200px auto 0;padding-top:5px;}
@@ -37,6 +32,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.detail input{ height:30px; width:150px; float:right;margin:10px 0; border:1px solid #96A5B4;}
 		.subButton{display:block;height:28px; width:295px; margin:5px auto 0; border:0;padding:0; border:1px solid #fff;background:#5A98DE;color:#fff; border-radius:5px; font-size:14px;}
 		.detail button{ display:block;background:#5A98DE; height:30px; width:85px;float:right; margin:10px 0;border:0;font-size:14px; border-radius:5px;color:#fff;}
+		.checkCode{width:290px;height:30px;text-align:center;margin:0 auto;background:#ECF4FF;border:0;}
+		.center{text-align:center;}
+		.checkButton{width:85px;height:30px;display:block;}
 		
 	</style>
 	<script>
@@ -49,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        $.ajax({  
 	            url : "\pluginAjax",  
 	            type : "GET",  
-	            data : {Text:"checkCode",Customer:$("#Customer").val()},  
+	            data : {Text:"BeanCheckCode",Customer:$("#Customer").val()},  
 	            success : function(root) {  
 	                $("#checkCode").val(root); 
 	            },
@@ -113,14 +111,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="center">
   		<input class="checkCode" type="text" id="checkCode" disabled="true" />
   		</div>
-  		<div class="button"> <span>管理用户登录</span></div>
-  		<form method="post" action="<%=path %>/user/login.action" onsubmit="return check()">
+  		<div class="button"> <span>用户登录</span></div>
+  		<form method="post" action="<%=path %>/user/Beanlogin.action" onsubmit="return check()">
   			
 	  		<div class="detail clear">
 	  			<span>用户帐号</span>&nbsp;&nbsp;<input type="text" id="Customer" name="Customer"><br>
 	  			<span>密码</span>&nbsp;&nbsp;<input type="password" id="Password" name="Password"><br>
 	  			<span>验证码</span>&nbsp;&nbsp;<input type="text" id="Text" name="Text" style="float:none;width:50px;margin-left:32px;">
-	  			<input style="width:85px;height:30px; background:#5A98DE;border:0;border-radius:5px;" type="button" id="button" onclick="testAjax(this)" value="发送验证码" /><br>
+	  			<input style="width:85px;height:30px;background:#5A98DE;border-radius:5px;" type="button" id="button" onclick="testAjax(this)" value="发送验证码" /><br>
 	  		</div>
 	  		<input class="subButton" type="submit" name="Submit" value="登录"/>
 	  	</form>

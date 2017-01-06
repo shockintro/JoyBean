@@ -23,15 +23,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<style>
 		.clear{ display:block; clear:both; content:"";}
 		.clear{ zoom:1;}
-		.register{ height:260px;width:300px; margin:200px auto 0;padding-top:5px;}
-		.button{height:50px; width:290px; margin:0 auto; background:#388bff;color:#fff;margin:5px auto;}
-		.button span{display:block; height:100%; width:100%; text-align:center; line-height:50px;}
+			.register{ height:260px;width:300px; margin:200px auto 0;padding-top:5px;}
+		.button{height:50px; width:290px; margin:0 auto; background:#ECF4FF;color:#5A5A5A;margin:5px auto;}
+		.button span{display:block; height:100%; width:100%; text-align:center; line-height:50px; color:#5A5A5A;}
 		.detail{height:150px; width:290px; margin:0 0 0 5px;  }
-		.detail span{display:inline-block; height:30px; width:110px; background:#bdbdbd; text-align:center; line-height:30px;margin:10px 0;}
-		.detail input{ height:30px; width:150px; float:right;margin:10px 0;}
-		.subButton{display:block;height:28px; width:295px; margin:5px auto 0; border:0;padding:0; border:1px solid #fff; border-radius:5px;background:#388bff; color:#fff;font-size:14px;}
-		.cancel{display:block;height:28px; width:295px; margin:5px auto 0; border:0;padding:0; border:1px solid #fff; border-radius:5px; background:#388bff;color:#fff;font-size:14px;}
-		.detail button{ display:block; height:30px; width:85px;float:right; margin:10px 0;border:0;font-size:14px; background:#388bff;color:#fff;border-radius:5px;}
+		.detail span{display:inline-block; height:30px; width:110px;color:#5A5A5A; background:#ECF4FF; text-align:center; line-height:30px;margin:10px 0;}
+		.detail input{ height:30px; width:150px; float:right;margin:10px 0; border:1px solid #96A5B4;}
+		.subButton{display:block;height:28px; width:295px; margin:5px auto 0; border:0;padding:0; border:1px solid #fff; border-radius:5px;background:#5A98DE; color:#fff;font-size:14px;}
+		.cancel{display:block;height:28px; width:295px; margin:5px auto 0; border:0;padding:0; border:1px solid #fff; border-radius:5px; background:#5A98DE;color:#fff;font-size:14px;}
+		.detail button{ display:block; height:30px; width:85px;float:right; margin:10px 0;border:0;font-size:14px; background:#5A98DE;color:#fff;border-radius:5px;}
 		
 	</style>
 	<script>
@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!--用户注册-->
   	<div class="register">
   		<div class="button"> <span>用户注册</span></div>
-  		<form method="post" action="Login.jsp" onsubmit="return check()">
+  		<form method="post" action="<%=path %>/user/register.action" onsubmit="return check()">
 	  		<div class="detail clear">
 	  			<span>用户帐号</span><input type="text" id="Customer" name="Customer"><br>
 	  			<span>密码</span><input type="password" id="Password" name="Password"><br>

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class T_Game_Type {
 	private int id;
 	private String type_name;
-	private int type_status;  //状态，取值1：商用 2 ：下线
+	private int type_status;  //鐘舵�锛屽彇鍊�锛氬晢鐢�2 锛氫笅绾�
 	private Date create_time;
 	private Date modify_time;
 
@@ -35,8 +35,8 @@ public class T_Game_Type {
 		return type_status;
 	}
 
-	public void setType_status(int type_status) {
-		this.type_status = type_status;
+	public void setType_status(int i) {
+		this.type_status = i;
 	}
 
 	public Date getCreate_time() {

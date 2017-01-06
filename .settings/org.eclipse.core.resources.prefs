@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
+encoding//WebRoot/test/structReceive.jsp=UTF-8
+encoding//src/njupt/dao/BeansExchangeDAO.java=UTF-8
+encoding//src/njupt/dao/BeansUserDAO.java=UTF-8
 encoding//src/njupt/model/T_Beans_Exchange.java=UTF-8
+encoding//src/njupt/model/T_Game_Type.java=UTF-8
 encoding//src/njupt/model/T_Protect_List.java=UTF-8
