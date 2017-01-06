@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	
+	
+	<package name="user" namespace="/user" extends="struts-default">
+	    <action name="login" class="njupt.action.UserAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="register" class="njupt.action.UserAction" method="register">
+			<result name="success">/login.jsp</result>
+			<result name="error">/Register.jsp</result>
+		</action>
+<!-- 		<action class="njupt.action.UserAction" method="PersonalCenter">
+			
+		</action> -->
+	</package>
+	<package name="ajax" extends="struts-default,json-default" namespace="/">  
+		<action name="pluginAjax" class="njupt.action.bookAction" method="pluginAjax">  
+            <result type="json">  
+                <param name="root">Text</param>  
+            </result>  
+        </action > 
+        <action name="PersonalCenter" class="njupt.action.bookAction" method="PersonalCenter">
+			<result type="json">  
+                <param name="root">list</param>  
+            </result>  
+		</action>
+       <!--  <action name="reUse" class="njupt.action.bookAction" method="reUse">
+        	<result type="json">
+        		<param name="root"></param>
+        	</result>
+        </action>
+        <action name="forbidUse" class="njupt.action.bookAction" method="forbidUse">
+        	<result type="json">
+        		<param name="root"></param>
+        	</result>
+        </action> -->
+<!-- 		<action name="checkCode" class="njupt.action.checkCode" >
+			<result name="success">/login.jsp</result>
+		</action> -->
+		<!-- 验证码AJAX -->
+	
+	</package>
+</struts>    
