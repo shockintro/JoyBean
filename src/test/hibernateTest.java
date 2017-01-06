@@ -15,7 +15,8 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 public class hibernateTest extends HibernateDaoSupport{
 	public void test(){
 		System.out.println(getHibernateTemplate().find("from T_User"));
-	}
+			//aaaa
+}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		hibernateTest a=new hibernateTest();
